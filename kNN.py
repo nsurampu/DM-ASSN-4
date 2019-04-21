@@ -46,7 +46,7 @@ class KNN:
 		# print(sorted_counts)
 		return sorted_counts[0][0]
 
-	def getValidationSet(self, validation_set):
+	def get_validations(self, validation_set):
 		validations = []
 		for x in range(len(validation_set)):
 			validations.append(validation_set[x][-1])
@@ -70,7 +70,7 @@ if __name__ == "__main__":
 		result = knn.get_predictions(neighbors)
 		predictions.append(result)
 		print("Predcted class: " + repr(result) + ", Actual class: " + repr(validation_set[x][-1]))
-	validations = knn.getValidationSet(validation_set)
+	validations = knn.get_validations(validation_set)
 	accuracy = accuracy_score(validations, predictions)
 	cf_matrix = confusion_matrix(validations, predictions)
 	class_report = classification_report(validations, predictions)
