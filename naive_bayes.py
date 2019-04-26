@@ -85,7 +85,7 @@ def naive_bayes(path_to_file):
 
 
     # print(prior_distribution)
-    print(accuracy/len(test_features))
+    print('accuracy: ',accuracy/len(test_features)*100,'%')
     print('predicted: matrix: ',predicted_matrix)
     print('actual matrix: ',actual_matrix)
     # print(len(test_features),train_size)
